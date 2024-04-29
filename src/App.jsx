@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/header/header";
 import Gallery from "./components/sectionGallery/Gallery";
+import EasterEgg from "./components/sectionCliker/EasterEgg";
 import photoList from "./assets/photoList";
 
 function App() {
@@ -9,8 +10,13 @@ function App() {
       <header className="header">
         <Header />
       </header>
-      <main className="mainCoffee">
-        <Gallery photoList={photoList} />
+      <main>
+        <section className="mainCoffee">
+          <Gallery photoList={photoList} />
+        </section>
+        <section>
+          <EasterEgg />
+        </section>
       </main>
     </>
   );
