@@ -5,7 +5,7 @@ function Header() {
     <>
       <h1>Coffee Gallery</h1>
       <ul className="descriptionHeader">
-        <h2>Bienvenu sur mon nouveau site.</h2>
+        <h2>Bienvenu sur mon nouveau site</h2>
         <p>
           Dans la galerie tu peux y découvrir mes photos. Mon travail se porte
           sur le metier de barista. N'hésite pas à liker les photos qui te

@@ -1,0 +1,9 @@
+:root {
+  --background-color: #371a11;
+  --text-color: #c9986a;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
