@@ -4,15 +4,14 @@ import Photo from "./photo.jsx";
 function Gallery({ photoList }) {
   return (
     <>
-      {photoList.map((photoList) => {
+      {photoList.map((photo) => {
         return (
           <Photo
-            key={photoList.id}
-            photoName={photoList.photoName}
-            description={photoList.description}
-            price={photoList.price}
-            imgSrc={photoList.imgSrc}
-            like={photoList.like}
+            key={photo.id}
+            photoName={photo.photoName}
+            description={photo.description}
+            image={photo.image}
+            like={photo.like}
           />
         );
       })}

@@ -7,16 +7,23 @@ function Photo(props) {
     setCount((count) => count + 1);
   };
   return (
-    <section>
-      <h2>{props.photoName}</h2>
-      <figure>
-        <img src={props.imgSrc} alt={props.photoName} />
-        <figcaption>
-          <p>{props.description}</p>
-        </figcaption>
-      </figure>
-      <span>{props.price} EUR</span>
-      <button onClick={handleClickLike}>{count}❤️</button>
+    <section className="sectionCoffee">
+      <article className="articleCoffee">
+        <h3 className="nameCoffee">{props.photoName}</h3>
+        <figure>
+          <img
+            className="imageCoffee"
+            src={props.image}
+            alt={props.photoName}
+          />
+          <figcaption>
+            <p className="descriptionCoffee">{props.description}</p>
+          </figcaption>
+        </figure>
+        <button className="likeCoffee" onClick={handleClickLike}>
+          {count}❤️
+        </button>
+      </article>
     </section>
   );
 }

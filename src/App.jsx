@@ -1,14 +1,17 @@
 import "./App.css";
+import Header from "./components/header/header";
 import Gallery from "./components/sectionGallery/Gallery";
-import photoList from "./components/photoList";
+import photoList from "./assets/photoList";
 
 function App() {
   return (
     <>
-      <body>
-        <h1>Coffee Gallery</h1>
+      <header className="header">
+        <Header />
+      </header>
+      <main className="mainCoffee">
         <Gallery photoList={photoList} />
-      </body>
+      </main>
     </>
   );
 }
