@@ -1,10 +1,14 @@
 import "../../App.css";
+import React from "react";
 import Photo from "./photo.jsx";
 
-function Gallery({ photoList }) {
+function Gallery({ photoList, searchWord }) {
+  const filteredPhotos = photoList.filter((photo) =>
+    photo.photoName.toLowerCase().includes(searchWord.toLowerCase())
+  );
   return (
     <>
-      {photoList.map((photo) => {
+      {filteredPhotos.map((photo) => {
         return (
           <Photo
             key={photo.id}

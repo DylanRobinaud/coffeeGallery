@@ -21,7 +21,7 @@ function Photo(props) {
           </figcaption>
         </figure>
         <button className="likeCoffee" onClick={handleClickLike}>
-          {count}❤️
+          {count}🤍
         </button>
       </article>
     </section>

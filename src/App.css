@@ -18,49 +18,75 @@
 }
 
 .mainCoffee {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
   background-image: url(assets/background1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem 0;
+
+  .searchCoffee {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .galleryCoffee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem 0;
+
+    .sectionCoffee {
+      max-width: 20rem;
+
+      .articleCoffee {
+        background-color: var(--background-color);
+        box-shadow: 0px 0px 8px 2px var(--text-color);
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10rem;
+
+        .nameCoffee {
+          max-width: 15rem;
+          text-align: center;
+          color: var(--text-color);
+        }
+
+        .imageCoffee {
+          width: 10rem;
+          height: 10rem;
+        }
+
+        .descriptionCoffee {
+          max-width: 20rem;
+          text-align: center;
+          color: var(--text-color);
+        }
+
+        .likeCoffee {
+          padding: 1rem;
+          border-radius: 10rem;
+          box-shadow: 0px 0px 8px 6px var(--text-color);
+          color: var(--text-color);
+          background-color: var(--background-color);
+        }
+      }
+    }
+  }
 }
-.sectionCoffee {
-  max-width: 20rem;
-}
-.articleCoffee {
-  background-color: var(--background-color);
-  box-shadow: 0px 0px 8px 2px var(--text-color);
-  padding: 3rem;
+
+.easterEgg {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-radius: 10rem;
-}
 
-.nameCoffee {
-  max-width: 15rem;
-  text-align: center;
-  color: var(--text-color);
-}
-
-.imageCoffee {
-  width: 10rem;
-  height: 10rem;
-}
-.descriptionCoffee {
-  max-width: 20rem;
-  text-align: center;
-  color: var(--text-color);
-}
-
-.likeCoffee {
-  padding: 1rem;
-  border-radius: 10rem;
-  box-shadow: 0px 0px 8px 6px var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
+  .buttonEasterEgg {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 3rem;
+    .imageEasterEgg {
+      width: 5rem;
+    }
+  }
 }
