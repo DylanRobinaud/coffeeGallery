@@ -2,7 +2,7 @@ import "../../App.css";
 import React from "react";
 import Photo from "./photo.jsx";
 
-function Gallery({ photoList, searchWord }) {
+function Gallery({ photoList, searchWord, incrementTotalLikes }) {
   const filteredPhotos = photoList.filter((photo) =>
     photo.photoName.toLowerCase().includes(searchWord.toLowerCase())
   );
@@ -16,6 +16,7 @@ function Gallery({ photoList, searchWord }) {
             description={photo.description}
             image={photo.image}
             like={photo.like}
+            incrementTotalLikes={incrementTotalLikes}
           />
         );
       })}

@@ -12,6 +12,16 @@ function App() {
     setSearchWord(event.target.value);
   };
 
+  const [totalLikes, setTotalLikes] = useState(
+    parseInt(localStorage.getItem("totalLikes")) || 0
+  );
+
+  const incrementTotalLikes = () => {
+    const newTotalLikes = totalLikes + 1;
+    setTotalLikes(newTotalLikes);
+    localStorage.setItem("totalLikes", newTotalLikes.toString());
+  };
+
   return (
     <>
       <header className="header">
@@ -21,14 +31,20 @@ function App() {
         <section className="mainCoffee">
           <div className="searchCoffee">
             <input
+              className="searchInput"
               type="text"
               placeholder="Recherche par mot-clé ..."
               value={searchWord}
               onChange={handleSearchWord}
             />
+            <p className="totalLikes">Total Likes: {totalLikes}</p>
           </div>
           <div className="galleryCoffee">
-            <Gallery photoList={photoList} searchWord={searchWord} />
+            <Gallery
+              photoList={photoList}
+              searchWord={searchWord}
+              incrementTotalLikes={incrementTotalLikes}
+            />
           </div>
           <div className="easterEgg">
             <EasterEgg />

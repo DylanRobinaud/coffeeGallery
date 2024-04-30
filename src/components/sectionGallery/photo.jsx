@@ -4,7 +4,8 @@ import "../../App.css";
 function Photo(props) {
   const [count, setCount] = useState(props.like);
   const handleClickLike = () => {
-    setCount((count) => count + 1);
+    setCount(count + 1);
+    props.incrementTotalLikes();
   };
   return (
     <section className="sectionCoffee">
@@ -21,7 +22,7 @@ function Photo(props) {
           </figcaption>
         </figure>
         <button className="likeCoffee" onClick={handleClickLike}>
-          {count}🤍
+          🤍
         </button>
       </article>
     </section>
