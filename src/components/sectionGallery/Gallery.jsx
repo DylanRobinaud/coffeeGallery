@@ -1,18 +1,22 @@
 import "../../App.css";
+import React from "react";
 import Photo from "./photo.jsx";
 
-function Gallery({ photoList }) {
+function Gallery({ photoList, searchWord, incrementTotalLikes }) {
+  const filteredPhotos = photoList.filter((photo) =>
+    photo.photoName.toLowerCase().includes(searchWord.toLowerCase())
+  );
   return (
     <>
-      {photoList.map((photoList) => {
+      {filteredPhotos.map((photo) => {
         return (
           <Photo
-            key={photoList.id}
-            photoName={photoList.photoName}
-            description={photoList.description}
-            price={photoList.price}
-            imgSrc={photoList.imgSrc}
-            like={photoList.like}
+            key={photo.id}
+            photoName={photo.photoName}
+            description={photo.description}
+            image={photo.image}
+            like={photo.like}
+            incrementTotalLikes={incrementTotalLikes}
           />
         );
       })}

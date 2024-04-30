@@ -1,0 +1,110 @@
+.header {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .descriptionHeader {
+    display: flex;
+    flex-direction: column;
+  }
+  h1,
+  h2,
+  p {
+    margin: 1.3rem;
+    max-width: 30rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+}
+
+.mainCoffee {
+  background-image: url(assets/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .searchCoffee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+
+    .searchInput {
+      background-color: var(--background-color);
+      box-shadow: 0px 0px 8px 2px var(--text-color);
+      color: var(--text-color);
+      padding: 1.2rem;
+      border-radius: 10rem;
+    }
+
+    .totalLikes {
+      background-color: var(--background-color);
+      box-shadow: 0px 0px 8px 2px var(--text-color);
+      color: var(--text-color);
+      padding: 1.2rem;
+      border-radius: 10rem;
+    }
+  }
+
+  .galleryCoffee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .sectionCoffee {
+      max-width: 20rem;
+
+      .articleCoffee {
+        background-color: var(--background-color);
+        box-shadow: 0px 0px 8px 2px var(--text-color);
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10rem;
+
+        .nameCoffee {
+          max-width: 15rem;
+          text-align: center;
+          color: var(--text-color);
+        }
+
+        .imageCoffee {
+          width: 10rem;
+          height: 10rem;
+        }
+
+        .descriptionCoffee {
+          max-width: 20rem;
+          text-align: center;
+          color: var(--text-color);
+        }
+
+        .likeCoffee {
+          padding: 1rem;
+          border-radius: 10rem;
+          box-shadow: 0px 0px 8px 6px var(--text-color);
+          color: var(--text-color);
+          background-color: var(--background-color);
+        }
+      }
+    }
+  }
+}
+
+.easterEgg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .buttonEasterEgg {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 3rem;
+    .imageEasterEgg {
+      width: 5rem;
+    }
+  }
+}
